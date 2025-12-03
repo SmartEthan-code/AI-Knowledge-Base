@@ -161,8 +161,11 @@
     # 添加所有文件
     git add -A
 
+    git add .    #更新代码之后可以通过add . 暂存
+
     # 提交到本地仓库
     git commit -m "Initial commit for VitePress wiki"
+
     2. 创建 GitHub 远程仓库
     登录 GitHub，点击 New repository（新建仓库）。
 
@@ -171,9 +174,15 @@
     关联远程仓库： 复制 GitHub 页面上提供的远程仓库 URL（通常是 HTTPS 链接）。在命令行中执行：
 
     git remote add origin <你的 GitHub 仓库 URL>
+
+    在推送之前，强烈建议先从远程仓库拉取最新的更改。这可以确保您的本地分支是最新的，避免冲突。
+
+    git pull origin <分支名> # main或者master
+    
     推送到 GitHub：
 
-    git push -u origin main
+    git push origin <分支名> # main或者master
+
     3. 使用 Vercel 免费部署 (推荐，最简单)
     登录 Vercel： 访问 Vercel 官网 并使用您的 GitHub 账号登录。
 
