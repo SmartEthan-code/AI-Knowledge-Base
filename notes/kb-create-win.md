@@ -206,3 +206,63 @@
 
 
 完成后：编辑 docs/ 下的 Markdown 文件，推送到 GitHub，Vercel 会自动 rebuild 并发布新版本。
+
+# 可能会碰到问题的地方
+1. 如果网络使用代理或者有限制，git可能无法正常连接github仓库
+
+2.如何设置ssh登录
+    步骤一：创建或修改 SSH 配置文件
+    您需要修改本地的 SSH 配置文件 (config 文件)，告诉 Git/SSH 客户端，当连接 github.com 时，使用 443 端口而不是默认的 22 端口。
+
+    定位配置文件：
+
+    在文件管理器中，导航到您的用户目录下的 .ssh 文件夹：C:\Users\您的用户名\.ssh
+
+    如果该文件夹不存在，请创建它。
+
+    创建或编辑 config 文件：
+
+    在该文件夹内，创建一个名为 config 的文件（确保它没有文件扩展名，如 .txt）。
+
+    用记事本或其他文本编辑器打开 config 文件，注意不要有任何后缀名，并添加以下内容：
+
+    Host github.com
+        Hostname ssh.github.com
+        Port 443
+        User git
+
+    步骤二：测试连接
+    保存 config 文件后，您可以运行以下命令来测试 SSH 连接是否能通过 443 端口成功建立：
+
+    ssh -T git@github.com
+    如果成功，您应该会看到类似以下的信息（请将 SmartEthan-code 替换为您的用户名）：
+
+
+        Hi SmartEthan-code! You've successfully authenticated, but GitHub does not provide shell access.
+        这表示您已通过 443 端口成功验证身份。
+    
+    步骤三：切换SSH协议
+    1. 生成 SSH 密钥：
+
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+
+    按照提示操作，密钥通常保存在 C:\Users\YourUser\.ssh\ 目录下。
+
+    2. 将公钥添加到 GitHub：
+    复制公钥文件的内容（通常是 id_ed25519.pub）。
+
+    登录 GitHub -> Settings -> SSH and GPG keys -> New SSH key。
+
+    粘贴您的公钥。
+
+    3. 切换远程仓库地址：
+    将您当前的 HTTPS 远程仓库地址更改为 SSH 地址。
+
+    # 检查当前的远程仓库地址
+    git remote -v
+
+    # 移除旧的 HTTPS 地址
+    git remote remove origin
+
+    # 添加新的 SSH 地址（请替换为您的GitHub用户名和仓库名）
+    git remote add origin git@github.com:SmartEthan-code/AI-Knowledge-Base.git
