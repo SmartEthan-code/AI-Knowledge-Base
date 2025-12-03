@@ -1,0 +1,6 @@
+# 忽略 Node.js 依赖
+/node_modules
+# 忽略 VitePress 构建产物
+/.vitepress/dist
+# 忽略 pnpm 锁定文件
+pnpm-lock.yaml

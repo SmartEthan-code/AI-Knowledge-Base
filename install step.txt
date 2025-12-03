@@ -1,0 +1,6 @@
+AI Knowledge Base
+
+# 假设你的代理地址是 http://proxy.example.com:8080
+
+npm config set proxy=http://10.158.100.2:8080
+npm config set https-proxy=http://10.158.100.2:8080
