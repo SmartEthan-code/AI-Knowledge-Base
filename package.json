@@ -15,5 +15,8 @@
   "packageManager": "pnpm@10.24.0",
   "devDependencies": {
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0"
   }
 }
