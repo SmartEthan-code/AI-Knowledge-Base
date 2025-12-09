@@ -30,16 +30,17 @@ const sidebar = [
     text: '🛠️ 开发与部署',
     items: [
       { text: 'Python 环境配置', link: '/dev/python-setup' },
-      { text: 'Git & GitHub 高级', link: '/dev/git-advanced' },
-      { text: 'Vercel 部署流程', link: '/dev/vercel-flow' }
+      { text: 'Git & GitHub', link: '/dev/git-advanced' },
+      { text: 'Vercel 部署流程', link: '/dev/vercel-flow' },
+      { text: 'MD 开发指南', link: '/dev/md-guide' }
     ],
     collapsible: true
   },
   {
     text: '⚙️ 硬件设计与测试',
     items: [
-      { text: '硬件架构设计', link: '/hardware/architecture' },
-      { text: '硬件测试方法', link: '/hardware/testing' }
+      { text: '硬件设计', link: '/hardware/design' },
+      { text: '硬件测试', link: '/hardware/testing' }
     ],
     collapsible: true
   },
@@ -48,7 +49,7 @@ const sidebar = [
     items: [
       { text: 'WiFi 协议基础', link: '/wifi/protocol' },
       { text: 'WiFi 开发指南', link: '/wifi/development' },
-      { text: 'WiFi 测试与调试', link: '/wifi/testing' }
+      { text: 'WiFi 调试与测试', link: '/wifi/testing' }
     ],
     collapsible: true
   },
@@ -86,8 +87,8 @@ export default defineConfig({
     // 导航栏 (顶部链接)
     nav: [
       { text: '主页', link: '/' },
-      { text: '📚 知识笔记', link: '/notes/' },
-      { text: '🔗 外部链接', link: 'https://github.com/SmartEthan-code/AI-Knowledge-Base' }
+      { text: '📚 知识笔记', link: '/notes/kb-create-win' },
+      { text: '🔗 GitHub', link: 'https://github.com/SmartEthan-code/AI-Knowledge-Base' }
     ],
 
     // 侧边栏

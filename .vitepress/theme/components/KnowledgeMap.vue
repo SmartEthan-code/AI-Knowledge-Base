@@ -15,9 +15,10 @@ const graphData = {
     { name: '💡深度学习', symbolSize: 30, category: 1 },
     { name: '🛠️开发与部署', symbolSize: 30, category: 1 },
     { name: '⚙️硬件设计', symbolSize: 30, category: 1 },
-    { name: '📡无线通信', symbolSize: 30, category: 1 },
-    { name: '📶LTE/NR 开发', symbolSize: 30, category: 1 },
-
+    { name: '📡Wi-Fi', symbolSize: 30, category: 1 },
+    { name: '📶LTE/NR', symbolSize: 30, category: 1 },
+    { name: '🌐语言学习', symbolSize: 30, category: 1 },
+    
     // 子节点示例  
     { name: '基础算法', symbolSize: 15, category: 2 },
     { name: '模型评估', symbolSize: 15, category: 2 },
@@ -38,6 +39,9 @@ const graphData = {
     { name: 'NR开发', symbolSize: 15, category: 2 },
     { name: 'LTE测试', symbolSize: 15, category: 2 },
     { name: 'NR测试', symbolSize: 15, category: 2 },
+    { name: '英语学习', symbolSize: 15, category: 2 },
+    { name: '日语学习', symbolSize: 15, category: 2 },
+    { name: '法语学习', symbolSize: 15, category: 2 },
   ],
   // 关系（Links）列表，连接父子节点
   links: [
@@ -45,8 +49,9 @@ const graphData = {
     { source: 'AI 知识库', target: '💡深度学习' },
     { source: 'AI 知识库', target: '🛠️开发与部署' },
     { source: 'AI 知识库', target: '⚙️硬件设计' },
-    { source: 'AI 知识库', target: '📡无线通信' },
-    { source: 'AI 知识库', target: '📶LTE/NR 开发' },
+    { source: 'AI 知识库', target: '📡Wi-Fi' },
+    { source: 'AI 知识库', target: '📶LTE/NR' },
+    { source: 'AI 知识库', target: '🌐语言学习' },
     { source: '🧠机器学习核心', target: '基础算法' },
     { source: '🧠机器学习核心', target: '模型评估' },
     { source: '💡深度学习', target: 'Transformer' },
@@ -57,15 +62,18 @@ const graphData = {
     { source: '🛠️开发与部署', target: 'Vercel' },
     { source: '⚙️硬件设计', target: '硬件设计' },
     { source: '⚙️硬件设计', target: '硬件测试' },
-    { source: '📡无线通信', target: 'WiFi协议' },
-    { source: '📡无线通信', target: 'WiFi开发' },
-    { source: '📡无线通信', target: 'WiFi测试' },
-    { source: '📶LTE/NR 开发', target: 'LTE协议' },
-    { source: '📶LTE/NR 开发', target: 'NR协议' },
-    { source: '📶LTE/NR 开发', target: 'LTE开发' },
-    { source: '📶LTE/NR 开发', target: 'NR开发' },
-    { source: '📶LTE/NR 开发', target: 'LTE测试' },
-    { source: '📶LTE/NR 开发', target: 'NR测试' },
+    { source: '📡Wi-Fi', target: 'WiFi协议' },
+    { source: '📡Wi-Fi', target: 'WiFi开发' },
+    { source: '📡Wi-Fi', target: 'WiFi测试' },
+    { source: '📶LTE/NR', target: 'LTE协议' },
+    { source: '📶LTE/NR', target: 'NR协议' },
+    { source: '📶LTE/NR', target: 'LTE开发' },
+    { source: '📶LTE/NR', target: 'NR开发' },
+    { source: '📶LTE/NR', target: 'LTE测试' },
+    { source: '📶LTE/NR', target: 'NR测试' },
+    { source: '🌐语言学习', target: '英语学习' },
+    { source: '🌐语言学习', target: '日语学习' },
+    { source: '🌐语言学习', target: '法语学习' }
   ],
   // 分类（Categories）
   categories: [

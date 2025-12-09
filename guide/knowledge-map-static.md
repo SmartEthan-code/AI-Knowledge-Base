@@ -10,7 +10,7 @@
 | 🧠 | **机器学习核心** | 基础算法、模型评估与优化 | `/ml/basic-algos` |
 | 💡 | **深度学习 (DL)** | Transformer、PyTorch、CNN 与计算机视觉 | `/dl/transformer` |
 | 🛠️ | **开发与部署** | Python环境、Git/GitHub、Vercel 部署 | `/dev/python-setup` |
-| ⚙️ | **硬件设计与测试** | 架构设计、测试方法 | `/hardware/architecture` |
+| ⚙️ | **硬件设计与测试** | AP/Router/ONT/CPE设计、测试方法 | `/hardware/architecture` |
 | 📡 | **WiFi 开发与测试** | 协议基础、开发指南、调试方法 | `/wifi/protocol` |
 | 📶 | **LTE/NR 开发与测试** | 4G/5G 协议、开发集成、验证测试 | `/cellular/lte-protocol` |
 

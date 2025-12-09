@@ -2,14 +2,14 @@
 
 ![头像示例](https://avatars.githubusercontent.com/u/214053483?v=4 "请将 assets/profile.jpg 替换为你的照片")  
 
-> 大家好，我是 [你的名字]（可替换）。这里是我的个人自我介绍，包含简短文字和几张示意图片，方便在 README、博客或个人主页中使用。
+> 大家好，我是 [远华/Ethan]。这里是我的个人自我介绍。
 
 ---
 
 ## 我是谁
 - 职业 / 身份：射频工程师、硬件工程师，软件工程师，设计爱好者
 - 位置：上海
-- 简短一句话介绍：我热衷于用代码解决实际问题，喜欢学习新技术并分享知识。
+- 热衷于用代码解决实际问题，喜欢学习新技术并分享知识。
 
 ![工作场景](https://picsum.photos/seed/work/800/300 "工作与创作的场景")
 
@@ -26,7 +26,7 @@
 
 ## 技能与工具
 - 编程语言：Python / JavaScript 
-- 前端：React / Vue / HTML/CSS
+- 前端：Vue / HTML/CSS
 - 后端与运维：Node.js / Docker / CI
 - 其他：设计、写作
 
@@ -42,11 +42,9 @@
 
 ## 联系方式
 - 邮箱：wyhdgm@gmail.com
+- 微信公众号：AI+硬件测试与开发
+![扫码关注](/.vitepress/asserts/weichat_public.jpg)
 - GitHub：[github.com/SmartEthan](https://github.com/SmartEthan-code)
-- 个人网站 / 简历：...
+- 个人网站:https://ai-knowledge-base-bfv0ag3pd-ethans-projects-c5979879.vercel.app/
 
 ---
-
-备注：
-- 图片为占位示例：`assets/profile.jpg` 建议放入仓库并替换为真实头像，网络图片可替换为你自己的图床或授权图片。
-- 可根据需要调整语言风格、段落与图片，或添加项目展示部分（项目列表与项目截图）。
