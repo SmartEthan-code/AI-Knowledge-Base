@@ -17,6 +17,10 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "echarts": "^6.0.0"
+    "@types/node": "^25.0.0",
+    "ai": "^5.0.109",
+    "dotenv": "^17.2.3",
+    "echarts": "^6.0.0",
+    "tsx": "^4.21.0"
   }
 }

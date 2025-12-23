@@ -60,3 +60,97 @@ git checkout -b <branch>   # 创建分支
 4. 提交更改
 5. Push 到 GitHub
 6. 创建 Pull Request
+
+<br>
+
+# 通过 SSH 方式在不同的电脑上连接同一个 GitHub 仓库
+💻 步骤一：在每台电脑上生成 SSH 密钥对
+SSH 密钥对由一个私钥（Private Key，留在本地）和一个公钥（Public Key，上传到 GitHub）组成。
+
+1. 检查现有密钥（可选）
+在每台电脑的终端或 Git Bash 中运行：
+
+Bash
+
+ls -al ~/.ssh
+如果看到 id_rsa.pub 或 id_ed25519.pub 文件，说明您可能已经有一个密钥对。如果想使用新的，请继续执行步骤 2。
+
+2. 生成新的 SSH 密钥对
+为每台电脑生成一个新的、唯一的密钥对。建议使用 Ed25519 算法，它更快、更安全。
+
+Bash
+
+# 运行命令，将邮箱替换为您的 GitHub 邮箱
+ssh-keygen -t ed25519 -C "your_email@example.com_for_this_computer"
+保存位置： 默认情况下，它会提示您保存在 ~/.ssh/id_ed25519。直接按 Enter 接受默认位置即可。
+
+设置密码： 强烈建议设置一个密码（passphrase）。这样即使您的私钥文件丢失，黑客也无法直接使用。
+
+3. 将私钥添加到 SSH 代理
+启动 SSH 代理并在每台电脑上添加您的私钥，这样您就不必每次都输入密码。
+
+Bash
+
+# 启动 ssh-agent
+eval "$(ssh-agent -s)"
+
+# 将私钥添加到 ssh-agent
+ssh-add ~/.ssh/id_ed25519
+🌐 步骤二：将所有公钥添加到 GitHub 账户
+您需要将每台电脑生成的公钥内容复制，并添加到您的 GitHub 账户设置中。
+
+1. 复制公钥内容
+在每台电脑上，打开并复制公钥文件 (.pub 结尾) 的全部内容。
+
+Bash
+
+# 复制 id_ed25519.pub 文件的内容到剪贴板
+# macOS:
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# Windows (Git Bash):
+cat ~/.ssh/id_ed25519.pub | clip
+2. 在 GitHub 上添加公钥
+登录您的 GitHub 账户。
+
+点击右上角您的头像，选择 Settings (设置)。
+
+在左侧导航栏中，选择 SSH and GPG keys。
+
+点击 New SSH key 或 Add SSH key。
+
+Title (标题): 为这个密钥起一个有辨识度的名字（例如：“我的工作笔记本”、“家庭台式机”）。
+
+Key (密钥): 将您复制的公钥内容粘贴到这里。
+
+点击 Add SSH key 完成添加。
+
+重复此步骤，将所有需要连接仓库的电脑的公钥都添加到您的 GitHub 账户。
+
+✅ 步骤三：测试 SSH 连接和更新仓库地址
+1. 测试连接
+在每台电脑上运行以下命令来验证连接是否成功：
+
+Bash
+
+ssh -T git@github.com
+如果成功，您会收到一条消息，类似于：Hi [YourUsername]! You've successfully authenticated...
+
+2. 克隆或更新仓库地址
+确保您的本地仓库使用的是 SSH 地址，而不是 HTTPS 地址。
+
+如果仓库尚未克隆： 使用 SSH 链接进行克隆（例如 git@github.com:YourName/YourRepo.git）。
+
+Bash
+
+git clone git@github.com:YourName/YourRepo.git
+如果仓库已存在（从 HTTPS 切换到 SSH）：
+
+Bash
+
+# 移除旧的 origin
+git remote remove origin
+
+# 添加新的 SSH origin 地址
+git remote add origin git@github.com:YourName/YourRepo.git
+现在，您就可以在所有授权的电脑上通过 SSH 协议安全地对同一仓库进行操作了。

@@ -4,3 +4,96 @@
 /.vitepress/dist
 # 忽略 pnpm 锁定文件
 pnpm-lock.yaml
+# 忽略 Python 虚拟环境
+/venv/
+# 忽略 Python 缓存文件
+__pycache__/
+# 忽略编译的 Python 文件
+*.pyc
+# 忽略 IDE 配置文件
+.vscode/    
+.idea/
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+# 忽略日志文件
+*.log
+# 忽略临时文件
+*.tmp 
+*.temp
+# 忽略输出文件夹
+/dist/
+/build/
+/output/
+# 忽略测试覆盖率报告
+/coverage/
+coverage.xml
+# 忽略打包文件  
+*.zip
+*.tar.gz    
+*.exe
+*.dll
+*.so
+*.dylib 
+# 忽略数据库文件
+*.db
+*.sqlite3   
+# 忽略环境变量文件
+.env
+.env.local
+.env.*.local    
+# 忽略 IDE 生成的项目文件
+*.sublime-project
+*.sublime-workspace
+# 忽略 Jupyter Notebook 检查点  
+.ipynb_checkpoints/
+# 忽略 Python Egg 文件
+*.egg-info/ 
+.eggs/
+# 忽略测试结果文件  
+/test-results/
+*.trx
+# 忽略打包工具生成的文件
+dist/
+build/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+# 忽略 PyInstaller 生成的文件
+*.manifest  
+*.spec
+# 忽略 Cython 编译生成的文件
+*.c
+*.so
+# 忽略 Sphinx 文档生成的文件
+docs/_build/
+# 忽略 mypy 类型检查生成的文件
+.mypy_cache/
+.dmypy.json
+# 忽略 Pyre 类型检查生成的文件
+.pyre/
+# 忽略 Celery 任务队列生成的文件
+celerybeat-schedule
+# 忽略 Jupyter Notebook 输出文件
+*.nbconvert.ipynb
+# 忽略 VS Code 扩展生成的文件
+.vscode-test/
+# 忽略 Poetry 虚拟环境
+.poetry/
+# 忽略 Pipenv 虚拟环境
+.pipenv/
+# 忽略 tox 虚拟环境
+.tox/
+.tox/*/
+# 忽略 pytest 生成的文件    
+.pytest_cache/
+# 忽略 coverage.py 生成的文件   
+.coverage
+.coverage.*
+htmlcov/
+# 忽略 Sphinx 文档生成的文件
+docs/_build/

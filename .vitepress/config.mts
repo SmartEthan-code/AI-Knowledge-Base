@@ -32,7 +32,7 @@ const sidebar = [
       { text: 'Python 环境配置', link: '/dev/python-setup' },
       { text: 'Git & GitHub', link: '/dev/git-advanced' },
       { text: 'Vercel 部署流程', link: '/dev/vercel-flow' },
-      { text: 'MD 开发指南', link: '/dev/md-guide' }
+      { text: 'MD 开发指南', link: '/dev/md-guide' }，
     ],
     collapsible: true
   },
@@ -87,7 +87,7 @@ export default defineConfig({
     // 导航栏 (顶部链接)
     nav: [
       { text: '主页', link: '/' },
-      { text: '📚 知识笔记', link: '/notes/kb-create-win' },
+      { text: '📚 知识笔记', link: '/notes/python-basic.md' },
       { text: '🔗 GitHub', link: 'https://github.com/SmartEthan-code/AI-Knowledge-Base' }
     ],
 
