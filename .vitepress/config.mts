@@ -32,7 +32,7 @@ const sidebar = [
       { text: 'Python 环境配置', link: '/dev/python-setup' },
       { text: 'Git & GitHub', link: '/dev/git-advanced' },
       { text: 'Vercel 部署流程', link: '/dev/vercel-flow' },
-      { text: 'MD 开发指南', link: '/dev/md-guide' }，
+      { text: 'MD 开发指南', link: '/dev/md-guide' }
     ],
     collapsible: true
   },

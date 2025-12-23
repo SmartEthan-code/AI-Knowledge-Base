@@ -59,3 +59,11 @@ DATABASE_URL=your_url
 - 使用环境变量保护敏感信息
 - 定期检查分析数据
 - 使用预览部署测试更改
+
+<br>
+
+# 本地部署
+```
+npm run docs:dev
+```
+
